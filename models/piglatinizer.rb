@@ -15,7 +15,7 @@ class PigLatinizer
       end
       converted += result
     end
-    converted
+    converted.pop
   end
   
 end 
