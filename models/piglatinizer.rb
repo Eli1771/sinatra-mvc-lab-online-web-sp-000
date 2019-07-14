@@ -15,7 +15,7 @@ class PigLatinizer
       end
       converted += result
     end
-    converted
+    converted[0, converted.length - 2]
   end
   
 end 
