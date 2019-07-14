@@ -6,7 +6,7 @@ class PigLatinizer
     words.each do |word|
       if word[0].match(/[aeiouAEIOU]/)
         result = word + 'way '
-      else 
+      else
         letters = word.chars 
         first_vowel = letters.find_index {|l| l.match(/[aeiouAEIOU]/)}
         syl1 = word[first_vowel, word.length - 1]
