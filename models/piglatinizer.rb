@@ -15,7 +15,7 @@ class PigLatinizer
       end
       converted += result
     end
-    converted.pop
+    converted.chars.pop.join
   end
   
 end 
