@@ -13,8 +13,9 @@ class PigLatinizer
         syl2 = word[0, first_vowel]
         pl_word = syl1 + syl2 + 'ay '
       end
+      converted << pl_word
     end
-    words
+    converted
   end
   
 end 
