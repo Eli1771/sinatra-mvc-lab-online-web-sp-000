@@ -15,7 +15,7 @@ class PigLatinizer
       end
       converted << pl_word
     end
-    converted
+    converted.join(" ")
   end
   
 end 
