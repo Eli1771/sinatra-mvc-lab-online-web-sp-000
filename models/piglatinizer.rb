@@ -3,7 +3,7 @@ class PigLatinizer
   def piglatinize(phrase) 
     converted = ''
     words = phrase.split(" ")
-    words.each do |word|
+    words.map do |word|
       if word[0].match(/[aeiouAEIOU]/)
         pl_word = word + 'way '
       else
@@ -13,9 +13,8 @@ class PigLatinizer
         syl2 = word[0, first_vowel]
         pl_word = syl1 + syl2 + 'ay '
       end
-      converted += pl_word
     end
-    converted
+    words
   end
   
 end 
