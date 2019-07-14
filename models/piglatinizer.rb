@@ -1,7 +1,7 @@
 class PigLatinizer 
   
   def piglatinize(phrase) 
-    converted = ''
+    converted = []
     words = phrase.split(" ")
     words.map do |word|
       if word[0].match(/[aeiouAEIOU]/)
