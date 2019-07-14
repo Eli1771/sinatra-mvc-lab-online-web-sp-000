@@ -5,17 +5,17 @@ class PigLatinizer
     words = phrase.split(" ")
     words.each do |word|
       if word[0].match(/[aeiouAEIOU]/)
-        result = word + 'way '
+        pl_word = word + 'way '
       else
         letters = word.chars 
         first_vowel = letters.find_index {|l| l.match(/[aeiouAEIOU]/)}
         syl1 = word[first_vowel, word.length - 1]
         syl2 = word[0, first_vowel]
-        result = syl1 + syl2 + 'ay '
+        pl_word = syl1 + syl2 + 'ay '
       end
-      converted += result
+      converted += pl_word
     end
-    converted = converted.chars.pop.join
+    result = converted.chars.pop.join
   end
   
 end 
